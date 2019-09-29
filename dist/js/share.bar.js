@@ -1,4 +1,5 @@
-/*! ShareBar - v3.2.0 - 2019-09-28 - * Copyright (c) 2019 Globo.com; Licensed MIT */
+/*! ShareBar - v3.2.0 - 2019-09-29 - * Copyright (c) 2019 Globo.com; Licensed MIT */
+/*global DocumentTouch, FB , this, window*/
 function ShareBar(options) {
     'use strict';
     return this.init(options);
@@ -385,6 +386,7 @@ function ShareBar(options) {
                 '   </div>',
                 '<span>' + title + '</span>'
             ].join('');
+          
 
             return iconElement;
         },
@@ -439,7 +441,7 @@ function ShareBar(options) {
                 };
                 (function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) { return; }
+                    if (d.getElementById(id)) {return;}
                     js = d.createElement(s);
                     js.id = id;
                     js.src = "//connect.facebook.net/en_US/sdk.js";

@@ -1,5 +1,8 @@
+/*jslint
+    window, this
+*/
 /*global describe, it, expect, spyOn,
-         beforeEach, afterEach, jasmine, xit, ShareBar, FB */
+         beforeEach, afterEach, jasmine, xit, ShareBar, FB, window, this */
 
 function createBar(options) {
     'use strict';
