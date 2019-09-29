@@ -1,4 +1,4 @@
-/*! ShareBar - v3.2.0 - 2018-11-08 - * Copyright (c) 2018 Globo.com; Licensed MIT */
+/*! ShareBar - v3.2.0 - 2019-09-28 - * Copyright (c) 2019 Globo.com; Licensed MIT */
 function ShareBar(options) {
     'use strict';
     return this.init(options);

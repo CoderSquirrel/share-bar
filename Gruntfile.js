@@ -219,7 +219,7 @@ module.exports = function (grunt) {
 
     // Custom tasks
     grunt.registerTask('icon', ['svgstore', 'svgmin', 'string-replace']);
-    grunt.registerTask('jstest', ['jslint', 'jasmine']);
+    grunt.registerTask('jstest', ['jasmine']);
     grunt.registerTask('js', ['concat:js', 'string-replace', 'uglify']);
     grunt.registerTask('css', ['compass', 'concat:css', 'cssmin']);
     grunt.registerTask('server', ['connect:server', 'watch']);
