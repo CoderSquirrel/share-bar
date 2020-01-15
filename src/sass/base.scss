@@ -4,13 +4,7 @@
     width: 100%;
 
     .share-button {
-        @media(min-width:768px){
-            display: inline-block;
-        }
-        @media(max-width:768px){
-            display: table-cell;
-            
-        }
+        display: table-cell;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-family: ProximaNova-Bold, Arial;
@@ -20,7 +14,7 @@
         min-width: 40px;
         vertical-align: bottom;
         text-align: center;
-        padding-right: 4px;
+        padding-left: 4px;
 
         &:first-child {
             padding-left: 0px;
@@ -29,13 +23,14 @@
         a {
             display: block;
             padding: 9px 10px 11px 10px;
-            min-height: 20px;
-            height: auto;
-            margin-bottom: 2px;
+            height: 20px;
             border-radius: 3px;
             text-decoration: none;
             box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
             box-sizing: content-box;
+            min-height: 20px;
+            height: auto;
+            margin-bottom: 2px;
 
             &:active {
                 padding-bottom: 6px;
@@ -43,22 +38,9 @@
             }
         }
 
-        span {          
-            line-height: 21px;
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 11px;
-            color: white;
-            width: 70px;
-            text-align: center;
-        
+        span {
+            display: none;
 
-            @media(min-width: 768px) {
-                display:inline-block !important;
-            }
-            @media(max-width: 768px) {
-                display:none !important;
-            }
         }
 
         &.share-full {
@@ -67,8 +49,24 @@
             a {
                 padding: 6px 10px 8px 10px;
             }
+            span {
+                line-height: 21px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 11px;
+                color: white;
+                width: 70px;
+                text-align: center;
+    
+    
+                @media(min-width: 768px) {
+                   display:inline-block;
+                }
+                @media(max-width: 768px) {
+                   display:none;
+                }
+            }
 
-           
             .share-icon {
                 top: inherit;
                 transform: inherit;
@@ -151,4 +149,3 @@
 .share-email .svg-size .share-icon {
     max-width: 16px;
 }
-

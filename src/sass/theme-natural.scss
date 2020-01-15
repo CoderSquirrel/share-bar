@@ -1,8 +1,16 @@
 .share-theme-natural {
+    .share-button {
+        @media(min-width:768px){
+            display: inline-block;
+        }
+        @media(max-width:768px){
+            display: table-cell;
+
+         }
+    }
     .share-button a {
         transition: background 300ms ease;
     }
-
     .share-facebook a {
         background-color: #325c99;
     }

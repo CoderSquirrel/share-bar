@@ -1,4 +1,4 @@
-/*! ShareBar - v3.2.0 - 2019-09-29 - * Copyright (c) 2019 Globo.com; Licensed MIT */
+/*! ShareBar - v3.2.0 - 2020-01-14 - * Copyright (c) 2020 Globo.com; Licensed MIT */
 /*global DocumentTouch, FB , this, window*/
 function ShareBar(options) {
     'use strict';
@@ -57,6 +57,10 @@ function ShareBar(options) {
             this.mergeOptions(options);
             this.containers = document.querySelectorAll(this.selector);
             this.createBars();
+            
+            window.addEventListener('resize', function () {
+                this.recreateBars();
+            }.bind(this));
         },
 
         destroy: function destroy() {
@@ -197,7 +201,16 @@ function ShareBar(options) {
             }
 
         },
+        recreateBars: function recreateBars() {
+            var items = this.containers,
+                element = 0;
 
+            for (element = 0; element < items.length; element++) {
+                items[element].innerHTML = "";
+                this.createBar(items[element]);
+            }
+
+        },
         createBar: function createBar(element, networks) {
             var theme = ' share-theme-',
                 i = 0,
@@ -220,6 +233,7 @@ function ShareBar(options) {
             this.bindShare(element);
             this.onCreateBar(element);
         },
+        
 
         getButtonsSize: function getButtonsSize(containerWidth, numberOfButtons) {
             var fullButtonWidth = this.buttonFullWidth + this.buttonPadding,
